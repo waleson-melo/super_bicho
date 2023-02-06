@@ -1,7 +1,15 @@
 <?php
-    include("conexao.php");
-    session_start();
+session_start();
+require_once('src/controller/loginController.php');
 
+$controller = new LoginController();
+
+$action = !empty($_GET['action']) ? $_GET['action'] : null;
+$message = !empty($_SESSION['msg']) ? $_SESSION['msg'] : null;
+
+if($action) {
+    $controller->login($_POST['login_user'], $_POST['senha_user']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,17 +24,24 @@
 </head>
 
 <body>
+<?php
+if($message != null) {
+?>
     <div class="container-message">
         <div class="message-error">
-            <p>Erro ao entrar. Login ou Senha incorreto(s)!</p>
+            <p><?php echo $message; ?></p>
             <button class="btn-alert">X</button>
         </div>
     </div>
+<?php
+    unset($_SESSION['msg']);
+}
+?>
     <div class="container-login">
         <div class="card-login">
             <img src="static/img/gato.jpg" alt="gatinho">
             <div class="content-login">
-                <form class="form-login" method="POST" action="logar.php">
+                <form class="form-login" method="POST" action="?action=login">
                     <h1>Login</h1>
                     <hr>
                     <div class="inp">
@@ -37,13 +52,8 @@
                         <label for="senha_user">Sua senha</label>
                         <input id="senha_user" name="senha_user" required="required" type="password" placeholder="**************************">
                     </div>
-                    
-                    <div>
-                        <input class="btn-principal" type="submit" value="Logar"></input>
-                    </div>
-                    <button class="btn-principal"><a href="primeiro_acesso.php" class="btn-principal">Primeiro Acesso</a></button>
-                    
 
+                    <button class="btn-principal" type="submit">Entrar</button>
                 </form>
             </div>
             <div class="footer-card-login">
@@ -52,5 +62,4 @@
         </div>
     </div>
 </body>
-
 </html>
