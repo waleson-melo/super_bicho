@@ -2,25 +2,26 @@
 
 require_once('./src/model/loginModel.php');
 
-class LoginController {
+class LoginController
+{
     private LoginModel $model;
 
-    function __construct() {
+    function __construct()
+    {
         $this->model = new LoginModel();
     }
 
-    function login($userLogin, $password): void {
+    function login($userLogin, $password): void
+    {
         $resultData = $this->model->login($userLogin, $password);
 
-        if($resultData) {
+        if ($resultData) {
+            session_destroy();
             header('Location: ./src/view/dashboard.php');
-            exit;
         } else {
             $_SESSION['msg'] = 'Erro ao entrar. Login ou Senha incorreto(s)!';
             header('Location: ./index.php');
-            exit;
         }
-//        print_r($resultData);
-//        header();
+        exit;
     }
 }

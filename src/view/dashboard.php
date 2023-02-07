@@ -24,7 +24,7 @@
                     <a href="" class="btn-menu font-bold">Serviços</a>
                 </li>
                 <li>
-                    <a href="" class="btn-menu font-bold">Usuários</a>
+                    <a href="usuarios.php" class="btn-menu font-bold">Usuários</a>
                 </li>
             </ul>
         </nav>
