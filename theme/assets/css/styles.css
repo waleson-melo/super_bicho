@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lemonada', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background: #EFEFEF;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* Auth */
+
+.container-login {
+    background-color: #e9e9e9;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-login img {
+    width: 50%;
+    border-radius: 10px 00px 0px 0px;
+}
+
+.content-login {
+    background-color: #ffffff;
+    height: 90%;
+    width: 50%;
+    padding: 10px;
+    border-radius: 0px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login {
+    width: 100%;
+}
+
+.form-login h1 {
+    text-align: center;
+}
+
+.footer-card-login {
+    background: #A7E0F2;
+    height: 15%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* Fim Auth */
+
+/* ------------------------------------------------------------------------------------- */
+
+/* Dashboard */
+
+.header {
+    background: #a7e0f2;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.side-menu {
+    background: #FFAAC1;
+    position: fixed;
+    margin-top: 60px;
+    height: 100vh;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-side-menu {
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn-side-menu-selected {
+    background: #FF84A5;
+    color: #ffffff;
+}
+
+.btn-side-menu:hover {
+    background: #FF84A5;
+    color: #ffffff;
+}
+
+.container-main {
+    padding: 60px 10px 10px 10px;
+    margin-left: 200px;
+}
+
+.content {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-content {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-table {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table thead {
+    background: #FFB0B0;
+}
+
+table thead th {
+    padding: 0px 10px;
+}
+
+table tbody td {
+    padding: 0px 10px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.table-actions {
+    display: flex;
+    height: 80%;
+    gap: 2px;
+}
+
+.container-services {
+    background: #EFEFEF8C;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    height: 170px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    border: 1px solid #EFEFEFD1;
+}
+
+/* Fim Dashboard */
+
+/* ------------------------------------------------------------------------------------- */
+
+.margin-top-10px {
+    margin-top: 10px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.input-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    background: #D9D9D9;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    padding: 5px;
+}
+
+.input-search {
+    border-radius: 10px 0px 0px 10px;
+    margin-right: -5px;
+    height: 100%;
+}
+
+input:focus {
+    outline: 0;
+    background: #bebebe;
+}
+
+.box-input-search {
+    height: 100%;
+}
+
+.btn {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.btn-img {
+    display: flex;
+    height: 30px;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-link {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-search {
+    align-items: center;
+    height: 100%;
+    width: 40px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.btn-primary {
+    background: #6CC7E4;
+    color: #ffffff;
+}
+
+.btn-warning {
+    background: #e4dc6c;
+    color: #ffffff;
+}
+
+.btn-danger {
+    background: #e46c6c;
+    color: #ffffff;
+}
+
+.btn-primary:active {
+    background: #6ca0e4;
+}
+
+.btn-warning:active {
+    background: #b5ca4c;
+}
+
+.btn-danger:active {
+    background: #9a3535;
+}
+
+/* ------------------------------------------ */
+
+/* Mensagens */
+
+.container-message {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.messages {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bg-msg-success {
+    background: #62db7c;
+}
+
+.bg-msg-warning {
+    background: #dbc562;
+}
+
+.bg-msg-error {
+    background: #DB6262;
+}
+
+.message {
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-close-message {
+    background: #ffffffb7;
+    border: none;
+    border-radius: 30px;
+    width: 30px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.btn-close-message:hover {
+    background: #ffffffdc;
+}
+
+/* Fim Mensagens */
+
+/* ------------------------------------------ */

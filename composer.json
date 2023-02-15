@@ -1,0 +1,33 @@
+{
+  "name": "waleson-melo/superbicho",
+  "description": "Site de agendamento para Pet Shop",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Waleson Melo",
+      "email": "walesonmelo23@gmail.com",
+      "role": "Developer backend"
+    },
+    {
+      "name": "Marlon Silva",
+      "email": "marlondeividmd@gmail.com",
+      "role": "Developer frontend"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "source/Config.php"
+    ]
+  },
+  "require": {
+    "coffeecode/router": ">=2.0.2",
+    "ext-pdo": "*"
+  }
+}
