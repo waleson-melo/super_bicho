@@ -1,5 +1,14 @@
 <?php
+require_once('../../controller/usuarioController.php');
 
+$controller = new UsuarioController();
+
+$action = !empty($_GET['action']) ? $_GET['action'] : null;
+$message = !empty($_SESSION['msg']) ? $_SESSION['msg'] : null;
+
+if ($action) {
+    $controller->cadastrar($_POST['cpf'], $_POST['nome'], $_POST['telefone'], $_POST['email'], $_POST['senha'], $_POST['tipousuario']);
+}
 ?>
 
 <!doctype html>

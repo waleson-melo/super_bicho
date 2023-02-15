@@ -36,27 +36,8 @@ if ($message != null) {
     unset($_SESSION['msg']);
 }
 ?>
-<form method="POST" action="?action=cadastrar">
-    <label>cpf</label>
-    <input type="text" name="cpf">
-    <label>nome</label>
-    <input type="text" name="nome">
-
-    <label>telefone</label>
-    <input type="text" name="telefone">
-    <label>email</label>
-    <input type="text" name="email">
-    <label>senha</label>
-    <input type="text" name="senha">
-    <select name="tipousuario">
-        <option value="administrador">Administrador</option>
-        <option value="usu">Funcionario</option>
-    </select>
-    <label>endereço</label>
-    <input type="text" name="endereco">
-
-    <button type="submit">Salvar</button>
-    <a>Cancelar</a>
-</form>
+<h1>Usuários</h1>
+<a href="usuarios/formularioUsuario.php">ADD</a>
+<p>Tabela de listagem</p>
 </body>
 </html>

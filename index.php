@@ -39,7 +39,7 @@ if ($message != null) {
 ?>
 <div class="container-login">
     <div class="card-login">
-        <img src="static/img/gato.jpg" alt="gatinho">
+        <img src="../superbicho/pages/assets/img/gato.jpg" alt="gatinho">
         <div class="content-login">
             <form class="form-login" method="POST" action="?action=login">
                 <h1>Login</h1>
